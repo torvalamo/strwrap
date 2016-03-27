@@ -25,11 +25,11 @@ Don't worry about require()'ing it multiple times, it will only apply the change
     str.wrap('x')
     //-> xThis is a string.x
     
-    str.wrap('xx')
-    //-> xThis is a string.x
+    str.wrap('xy')
+    //-> xThis is a string.y
     
-    str.wrap('xx', null) // even numbered argument we want to have on both sides
-    //-> xxThis is a string.xx
+    str.wrap('xy', null) // even numbered argument we want to have on both sides
+    //-> xyThis is a string.xy
     
     str.wrap('x', 'yz') // explicit before and after
     //-> xThis is a string.yz
