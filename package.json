@@ -1,0 +1,22 @@
+{
+  "name": "strwrap",
+  "version": "1.0.0",
+  "description": "Wrap your strings in stuff.",
+  "repository": "torvalamo/strwrap",
+  "main": "strwrap.js",
+  "files": [
+    "strwrap.js"
+  ],
+  "keywords": [
+    "string",
+    "wrap",
+    "quote",
+    "quotes",
+    "bracket",
+    "brackets"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  }
+}
