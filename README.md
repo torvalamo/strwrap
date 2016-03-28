@@ -7,15 +7,21 @@ Wrap a string in something.
 
 ## Install
 
+#### For server side
+
     npm install strwrap
+
+#### For client side
+
+    bower install strwrap
 
 Or just copy strwrap.js to your client side js.
 
 ## Use
 
-It alters the String.prototype in your application. 
+**Important**: This library adds properties to the `String.prototype` in your application. If you don't know what that means, you're probably fine.
 
-Don't worry about require()'ing it multiple times, it will only apply the changes once.
+Don't worry about `require()`'ing it multiple times, it will only apply the changes once.
 
     require('strwrap');
     
@@ -34,68 +40,68 @@ Don't worry about require()'ing it multiple times, it will only apply the change
     str.wrap('x', 'yz') // explicit before and after
     //-> xThis is a string.yz
 
-There are some shortcuts available when it comes to brackets and quotation marks.
+Note that, as with any `String.prototype` property, you cannot use it on raw strings. You can only use it on something that returns a string (variables, function calls, etc).
+
+    'my string'.wrap('foo') // DOESNT WORK
     
-### Quotation marks
+    var str = 'my string'
+    str.wrap('foo') // WORKS
     
-    str.quote
-    str.wrap('\'')
+    String('my string').wrap('foo') // WORKS
+
+### Shortcuts
+
+There are some shortcuts available when it comes to brackets and quotation marks. 
+
+I don't personally use them, since I'm not yet sure if it's a good idea. Also I prefer to be explicit in telling it how to wrap.
+
+Feel free to leave comments in the github issues tracker if you have opinions on this.
+    
+#### Quotation marks
+    
+    str.quote // str.wrap('\'')
     //-> 'This is a string.'
     
-    str.quoted
-    str.wrap('"')
+    str.quoted // str.wrap('"')
     //-> "This is a string."
     
-    str.aquote // angle quote
-    str.wrap('‹›')
+    str.aquote // str.wrap('‹›')
     //-> ‹This is a string.›
     
-    str.aquoted // double angle quote
-    str.wrap('«»')
+    str.aquoted // str.wrap('«»')
     //-> «This is a string.»
     
-    str.raquote // reverse angle quote
-    str.wrap('›‹')
+    str.raquote // str.wrap('›‹')
     //-> ›This is a string.‹
     
-    str.raquoted // reverse double angle quote
-    str.wrap('»«')
+    str.raquoted // str.wrap('»«')
     //-> »This is a string.«
     
-    str.cquote // single (curve) quote
-    str.wrap('‘’')
+    str.cquote // str.wrap('‘’')
     //-> ‘This is a string.’
     
-    str.lquote // low single (curve) quote
-    str.wrap('‚‛')
+    str.lquote // str.wrap('‚‛')
     //-> ‚This is a string.‛
     
-    str.cquoted // double (curve) quote
-    str.wrap('“”')
+    str.cquoted // str.wrap('“”')
     //-> “This is a string.”
     
-    str.lquoted // low double (curve) quote
-    str.wrap('„‟')
+    str.lquoted // str.wrap('„‟')
     //-> „This is a string.‟
 
-### Brackets
+#### Brackets
 
-    str.parentheses // round brackets
-    str.wrap('()')
+    str.parentheses // str.wrap('()')
     //-> (This is a string.)
     
-    str.braces // curly brackets
-    str.wrap('{}')
+    str.braces // str.wrap('{}')
     //-> {This is a string.}
     
-    str.chevrons // angle brackets
-    str.wrap('<>')
+    str.chevrons // str.wrap('<>')
     //-> <This is a string.>
     
-    str.crotchets // square brackets
-    str.wrap('[]')
+    str.crotchets // str.wrap('[]')
     //-> [This is a string.]
     
-    str.dbrackets // double brackets
-    str.wrap('⟦⟧')
+    str.dbrackets // str.wrap('⟦⟧')
     //-> ⟦This is a string.⟧
