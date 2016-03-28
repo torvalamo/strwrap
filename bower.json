@@ -13,5 +13,9 @@
   "license": "MIT",
   "moduleType": "globals",
   "main": "strwrap.js",
-  "ignore": ["*.md", "*.json"]
+  "ignore": [
+    "*.md",
+    "*.json"
+  ],
+  "version": "1.0.0"
 }
