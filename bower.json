@@ -1,0 +1,17 @@
+{
+  "name": "strwrap",
+  "description": "Wrap your strings in stuff.",
+  "homepage": "https://github.com/torvalamo/strwrap",
+  "keywords": [
+    "string",
+    "wrap",
+    "quote",
+    "quotes",
+    "bracket",
+    "brackets"
+  ],
+  "license": "MIT",
+  "moduleType": "globals",
+  "main": "strwrap.js",
+  "ignore": ["*.md", "*.json"]
+}

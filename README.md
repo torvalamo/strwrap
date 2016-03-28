@@ -14,6 +14,8 @@ Wrap a string in something.
 #### For client side
 
     bower install strwrap
+    
+    bower install torvalamo/strwrap
 
 Or just copy strwrap.js to your client side js.
 
