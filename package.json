@@ -1,6 +1,6 @@
 {
   "name": "strwrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrap your strings in stuff.",
   "repository": "torvalamo/strwrap",
   "main": "strwrap.js",
